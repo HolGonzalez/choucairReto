@@ -1,8 +1,6 @@
 package tasks;
 
-import model.DataUser;
 import net.serenitybdd.screenplay.Actor;
-import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
@@ -48,7 +46,20 @@ public class Register implements Task {
                 Click.on(RegisterInterface.BUTTON_LANGUAGE),
                 Click.on(RegisterInterface.EMPTY),
                 Click.on(RegisterInterface.BUTTON_SELECT_SKILLS),
-                Click.on(RegisterInterface.BUTTON_SKILL)
+                Click.on(RegisterInterface.BUTTON_SKILL),
+                Click.on(RegisterInterface.BUTTON_SELECT_COUNTRY),
+                Click.on(RegisterInterface.BUTTON_COUNTRY),
+                Click.on(RegisterInterface.BUTTON_COUNTRY2),
+                Enter.theValue(country).into(RegisterInterface.INPUT_COUNTRY).thenHit(Keys.ENTER),
+                Click.on(RegisterInterface.BUTTON_SELECT_YEAR),
+                Click.on(RegisterInterface.BUTTON_YEAR),
+                Click.on(RegisterInterface.BUTTON_SELECT_MONTH),
+                Click.on(RegisterInterface.BUTTON_MONTH),
+                Click.on(RegisterInterface.BUTTON_SELECT_DAY),
+                Click.on(RegisterInterface.BUTTON_DAY),
+                Enter.theValue(password).into(RegisterInterface.INPUT_PASS),
+                Enter.theValue(password).into(RegisterInterface.INPUT_PASS2),
+                Click.on(RegisterInterface.BUTTON_SUBMIT)
         );
     }
 }

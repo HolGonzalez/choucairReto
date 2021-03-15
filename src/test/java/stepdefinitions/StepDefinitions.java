@@ -21,6 +21,6 @@ public class StepDefinitions {
     public void registerPlatform(List<DataUser> dataUser) throws Exception{
         OnStage.theActorCalled("user").wasAbleTo(OpenUp.thePage(),
                 (Register.onThePage(dataUser.get(0).getStrName(),dataUser.get(0).getStrLastName(),dataUser.get(0).getAddress(),
-                        dataUser.get(0).getEmail(),dataUser.get(0).getCountry(),dataUser.get(0).getPassword(), dataUser.get(0).getPhone())));
+                        dataUser.get(0).getEmail(),dataUser.get(0).getPhone(),dataUser.get(0).getCountry(), dataUser.get(0).getPassword())));
     }
 }
